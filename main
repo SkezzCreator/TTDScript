@@ -27,7 +27,7 @@ local Window = Rayfield:CreateWindow({
 })
 
 local MainTab = Window:CreateTab("TTD Script", 4483362458) -- Title, Image
-local MainSection = Tab:CreateSection("Dupe",true/false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+local MainSection = Tab:CreateSection("Dupe",false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
 
 Rayfield:Notify({
 	Title = "Succed!",
@@ -80,4 +80,4 @@ local Slider = MainTab:CreateSlider({
    end,
 })
 
-local MainSection = Tab:CreateSection("💰Farm Coins",true/false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+local Section = Tab:CreateSection("💰Farm Coins",true) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
