@@ -26,14 +26,14 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local MainTab = Window:CreateTab("TTD Script", 4483362458) -- Title, Image
+local MainTab = Window:CreateTab("TTD Script", null) -- Title, Image
 local MainSection = Tab:CreateSection("Dupe",false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
 
 Rayfield:Notify({
 	Title = "Succed!",
 	Content = "TTD Script!",
 	Duration = 3.5,
-	Image = 4483362458,
+	Image = null,
 	Actions = { -- Notification Buttons
 		Ignore = {
 			Name = "Okay!",
@@ -53,7 +53,7 @@ local Button = MainTab:CreateButton({
 	Title = "Succed!",
 	Content = "Dupe Units",
 	Duration = 3.5,
-	Image = 4483362458,
+	Image = null,
 	Actions = { -- Notification Buttons
 		Ignore = {
 			Name = "Okay!",
