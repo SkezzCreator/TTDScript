@@ -8,17 +8,32 @@ local Window = Rayfield:CreateWindow({
       Enabled = false,
       FolderName = nil, -- Create a custom folder for your hub/game
       FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Sirius Hub",
+      Subtitle = "Key System",
+      Note = "Join the discord (discord.gg/sirius)",
+      FileName = "SiriusKey",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "Hello"
    }
-   
+})
 
-local MainTab = Window:CreateTab("TTD Script", {size = {width = 400, height = 250}})
-local MainSection = Tab:CreateSection("Dupe",false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+local MainTab = Window:CreateTab("TTD Script", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Dupe", false) -- The 2nd argument is to tell if it's only a Title and doesn't contain elements
 
 Rayfield:Notify({
-	Title = "Succed!",
+	Title = "Succeed!",
 	Content = "TTD Script!",
 	Duration = 3.5,
-	Image = null,
+	Image = 4483362458,
 	Actions = { -- Notification Buttons
 		Ignore = {
 			Name = "Okay!",
@@ -31,23 +46,23 @@ Rayfield:Notify({
 
 local Button = MainTab:CreateButton({
    Name = "🚽Dupe",
-   Info = "It helps to you duplicate your units!After pressing button,wait for 15 sec.", -- Speaks for itself, Remove if none.
-   Interact = 'Changable',
+   Info = "It helps you duplicate your units! After pressing button, wait for 15 sec.", -- Speaks for itself, Remove if none.
+   Interact = 'Changeable',
    Callback = function()
-   Rayfield:Notify({
-	Title = "Succed!",
-	Content = "Dupe Units",
-	Duration = 3.5,
-	Image = null,
-	Actions = { -- Notification Buttons
-		Ignore = {
-			Name = "Okay!",
-			Callback = function()
-				print("Completed,please rejoin")
-			end
-		},
-	},
-})
+      Rayfield:Notify({
+         Title = "Succeed!",
+         Content = "Dupe Units",
+         Duration = 3.5,
+         Image = 4483362458,
+         Actions = { -- Notification Buttons
+            Ignore = {
+               Name = "Okay!",
+               Callback = function()
+                  print("Completed, please rejoin")
+               end
+            },
+         },
+      })
    end,
 })
 
@@ -60,9 +75,9 @@ local Slider = MainTab:CreateSlider({
    CurrentValue = 10,
    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-   -- The function that takes place when the slider changes
-   -- The variable (Value) is a number which correlates to the value the slider is currently at
+      -- The function that takes place when the slider changes
+      -- The variable (Value) is a number which correlates to the value the slider is currently at
    end,
 })
 
-local Section = Tab:CreateSection("💰Farm Coins",true) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
+local Section = MainTab:CreateSection("💰Farm Coins", true) -- The 2nd argument is to tell if it's only a Title and doesn't contain elements
