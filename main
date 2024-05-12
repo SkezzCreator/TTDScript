@@ -26,7 +26,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local MainTab = Window:CreateTab("TTD Script", null) -- Title, Image
+local MainTab = Window:CreateTab("TTD Script", {size = {width = 400, height = 250}})
 local MainSection = Tab:CreateSection("Dupe",false) -- The 2nd argument is to tell if its only a Title and doesnt contain elements
 
 Rayfield:Notify({
